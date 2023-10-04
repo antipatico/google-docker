@@ -1,5 +1,5 @@
 FROM golang AS builder
-ARG GOOGLE_VERSION=v1.2.3
+ARG GOOGLE_VERSION=v1.2.5
 RUN mkdir /nonexistent && chmod 777 /nonexistent
 USER nobody:nogroup
 RUN git clone -b $GOOGLE_VERSION https://github.com/1268/google /go/google && \
