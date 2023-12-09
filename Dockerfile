@@ -1,8 +1,8 @@
 FROM golang AS builder
-ARG GOOGLE_VERSION=v1.2.5
+ARG GOOGLE_VERSION=v1.3.6
 RUN mkdir /nonexistent && chmod 777 /nonexistent
 USER nobody:nogroup
-RUN git clone -b $GOOGLE_VERSION https://github.com/1268/google /go/google && \
+RUN git clone -b $GOOGLE_VERSION https://github.com/3052/google /go/google && \
     cd /go/google/cmd/play && \
     CGO_ENABLED=0 go build
 
